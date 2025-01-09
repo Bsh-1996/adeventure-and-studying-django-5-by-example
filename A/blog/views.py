@@ -101,6 +101,7 @@ def post_share(request, post_id):
 @require_POST
 def post_comment(request, post_id):
     post = get_object_or_404(Post, id= post_id, status= Post.Status.PUBLISHED)
+    # Initialize comment as None to handle form validation in the 'comment.html' template
     comment = None
     # A comment was posted
     form = CommentForm(data=request.POST)
