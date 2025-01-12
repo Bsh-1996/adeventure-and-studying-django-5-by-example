@@ -17,10 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
-from blog.sitemaps import PostSitemap
+from blog.sitemaps import PostSitemap # Import the sitemap class from the blog app
 
 sitemaps = {
-    'posts': PostSitemap,
+    'posts': PostSitemap, # Maps the sitemap to the PostSitemap class.
     }
 
 
